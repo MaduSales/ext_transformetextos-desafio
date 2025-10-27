@@ -14,12 +14,13 @@
 /* Layout App */
 .container-pai{
     width: 200px;
-    height: 200px;
+    height: 240px;
     /* FlexBox */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgba(207, 13, 6, 0.575);
 }
 
 /* Configurações dos Botões */
@@ -47,6 +48,8 @@
     border-radius: 2px;
     border: 1px solid black;
     cursor: pointer;
+    background-color: brown;
+    color:white
 }
 
 
@@ -56,18 +59,21 @@
 .cabecalho{
     display: flex;
     align-items: end;
-    gap: 7px;
-    padding: 7px;
+    gap: 5px;
+    padding: 5px;
 }
 
 .cabecalho h1{
     font-size: 13px;
+    color: rgb(87, 9, 9);
 }
 
 /*Entrada de Dados*/
 .input-text{
     width: 167px;
     padding: 2px 3px;
+    background-color: rgb(252, 220, 220);
+    border: 1px solid white;
 }
 
 /* Resultado */
@@ -80,4 +86,9 @@
 /* Rodapé */
 .rodape{
     margin-top: 5px;
+    color:white
+}
+
+a{
+    color: black;
 }
