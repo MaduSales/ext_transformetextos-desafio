@@ -12,10 +12,17 @@ window.document.addEventListener("DOMContentLoaded", function(){
         document.querySelector("#result").innerHTML = inputText.toLowerCase();
     });
 
-    //Botão: Primeira Letra Maiúscula
+    //Botão: Primeira Letra Maiúscula (Capitalização)
     window.document.querySelector("#btnCapitalize").addEventListener("click", function(){
         let inputText = document.querySelector("#input-text").value;
-        document.querySelector("#result").innerHTML = inputText.charAt(0).toUpperCase() + inputText.slice(1).toLowerCase();
+        document.querySelector("#result").innerHTML = inputText.toLowerCase();
+        let divisao = inputText.split(". ");
+
+        for (let i = 0; i < divisao.length; i++){
+            divisao[i] = divisao[i].charAt(0).toUpperCase() + divisao[i].slice(1);
+        }
+
+        document.querySelector("#result").innerHTML = divisao.join(". ");
     });
 
     // Botão: Limpar campos
