@@ -20,8 +20,8 @@ window.document.addEventListener("DOMContentLoaded", function(){
 
     // Botão: Limpar campos
     window.document.querySelector("#btnLimpar").addEventListener("click", function(){
-        document.querySelector("#input-text").value = " ";
-        document.querySelector("#result").innerHTML = " ";
+        document.querySelector("#input-text").value = "";
+        document.querySelector("#result").innerHTML = "";
         document.querySelector("#input-text").focus();
     });
 
