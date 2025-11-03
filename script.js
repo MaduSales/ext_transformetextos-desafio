@@ -14,16 +14,29 @@ window.document.addEventListener("DOMContentLoaded", function(){
 
     //Botão: Primeira Letra Maiúscula (Capitalização)
     window.document.querySelector("#btnCapitalize").addEventListener("click", function(){
-        let inputText = document.querySelector("#input-text").value;
-        document.querySelector("#result").innerHTML = inputText.toLowerCase();
-        let divisao = inputText.split(". ");
+    let inputText = document.querySelector("#input-text").value;
+    
+    inputText = inputText.toLowerCase();
+    let result = "";
+    let divisao = true;
 
-        for (let i = 0; i < divisao.length; i++){
-            divisao[i] = divisao[i].charAt(0).toUpperCase() + divisao[i].slice(1);
+    for (let i = 0; i < inputText.length; i++) {
+        let char = inputText[i];
+        
+        if (divisao && char >= 'a' && char <= 'z') {
+            result += char.toUpperCase();
+            divisao = false;
+        } 
+        else {
+            result += char;
+            if (char == '.' || char == '?' || char == '!') {
+                divisao = true;
+            }
         }
-
-        document.querySelector("#result").innerHTML = divisao.join(". ");
-    });
+    }
+    
+    document.querySelector("#result").innerHTML = result;
+});
 
     // Botão: Limpar campos
     window.document.querySelector("#btnLimpar").addEventListener("click", function(){
